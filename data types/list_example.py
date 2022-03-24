@@ -14,3 +14,30 @@ print(friends[-3:])
 friends.append("RAMESH")
 print("\nOne GH guy added to subinroom")
 print(friends[-4:])
+
+#output
+"""These are all employees at Bharat forge
+GOPI
+SRI
+ROHAN
+VIJAY
+GOVARDHAN
+KARTHI
+SUBIN
+MANI
+
+These are Gopi's best friends
+GOPI
+SRI
+ROHAN
+VIJAY
+
+Srinivas roommates
+['GOPI', 'SRI']
+
+Subin roommates
+['KARTHI', 'SUBIN', 'MANI']
+
+One GH guy added to subinroom
+['KARTHI', 'SUBIN', 'MANI', 'RAMESH']
+"""
