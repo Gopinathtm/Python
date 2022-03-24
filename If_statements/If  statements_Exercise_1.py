@@ -22,4 +22,3 @@ True
 False
 Pencil is in things
 """
-© 2022 GitHub, Inc.
