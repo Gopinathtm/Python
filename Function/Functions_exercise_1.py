@@ -14,7 +14,7 @@ def show_verified_users(verified_users):
 
 name = ['gopi', 'subin', 'karthi', 'mani']
 verified_name = []
-verify_users(name, verified_name)
+verify_users(name[:], verified_name)
 show_verified_users(verified_name)
 
 #output
