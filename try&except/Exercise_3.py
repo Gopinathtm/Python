@@ -6,7 +6,7 @@ def count_no_of_words(file_name):
         with open(file_name, encoding='utf-8') as txt:
             content = txt.read()
     except FileNotFoundError:
-        print(f"Sorry the entered filename {file_name} doesn't exist")
+        pass
     else:
         words = content.split()
         num_words = len(words)
@@ -16,7 +16,8 @@ def count_no_of_words(file_name):
 file_name = ['gopi.txt', 'little_women.txt', 'Alice_in_Wonderland.txt', 'Moby-Dick.txt']
 for file_nam in file_name:
     count_no_of_words(file_nam)
-    
+
+
 # output
 """
 The file gopi.txt contains 32 words in it
