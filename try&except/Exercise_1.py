@@ -21,24 +21,33 @@ while True:
         print(f'This is the sum of two numbers {answer}')
 
 # simple program with while loop and inputs to check try and except FileNotFoundError
-file_name = 'gopinath.txt'
+doc_name = 'gopinath.txt'
 try:
-    with open(file_name) as f:
+    with open(doc_name) as f:
         contents = f.read()
 except FileNotFoundError:
-    print(f"\nSorry the entered filename {file_name} doesn't exist")
+    print(f"\nSorry the entered filename {doc_name} doesn't exist")
+    
 # simple program with while loop and inputs to check try and except FileNotFoundError,
 # if succeeds print number of words in the file
-bookname = 'Alice_in_Wonderland.txt'
-try:
-    with open(bookname, encoding='utf-8') as f:
-        contents = f.read()
-except FileNotFoundError:
-    print(f"\nSorry the entered filename {bookname} doesn't exist")
-else:
-    words = contents.split()
-    num_words = len(words)
-    print(f"\n\nThe book {bookname} contains {num_words} words in it")
+
+
+def count_no_of_words(file_name):
+    try:
+        with open(file_name, encoding='utf-8') as txt:
+            content = txt.read()
+    except FileNotFoundError:
+        print(f"\nSorry the entered filename {file_name} doesn't exist")
+    else:
+        words = content.split()
+        num_words = len(words)
+        print(f"\n\nThe file {file_name} contains {num_words} words in it")
+
+
+file_name = 'gopi.txt'
+count_no_of_words(file_name)
+file_name = 'Alice_in_Wonderland.txt'
+count_no_of_words(file_name)
 
 #output
 """
@@ -47,12 +56,12 @@ Any number cannot be divided by zero
 Give two numbers i will add and give the answer
 Enter q to quit
 
-Enter first number : 5
-Enter second number : 4
-This is the sum of two numbers 9
+Enter first number : 6
+Enter second number : 7
+This is the sum of two numbers 13
 
-Enter first number : g
-Enter second number : 5
+Enter first number : 8
+Enter second number : j
 Please enter two integers or float
 
 Enter first number : q
@@ -60,5 +69,8 @@ Enter first number : q
 Sorry the entered filename gopinath.txt doesn't exist
 
 
-The book Alice_in_Wonderland.txt contains 29594 words in it 
+The file gopi.txt contains 32 words in it
+
+
+The file Alice_in_Wonderland.txt contains 29594 words in it
 """
